@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html style="height:100%">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" media="screen" title="no title" charset="utf-8" />
+  </head>
+  <body style="height:100%">
+    <div style="display:flex; height:100%">
+      <div style="margin:100px auto">
+        <h4>Ladda upp</h4>
+        <form action="/" method="post" enctype="multipart/form-data">
+          <input type="file" name="images" value="images" multiple>
+          <input type="submit" name="submit" value="Submit">
+        </form>
+
+        <h4>Filer</h4>
+        {{#each files}}
+          <div>
+            <a href="http://{{../hostname}}/{{this}}">http://{{../hostname}}/{{this}}</a>
+          </div>
+
+        {{/each}}
+
+      </div>
+    </div>
+  </body>
+</html>
